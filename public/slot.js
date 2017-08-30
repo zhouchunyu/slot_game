@@ -13,35 +13,24 @@ $(document).ready(function() {
     * Global variables
     */
     var completed = 0,
-        imgHeight = 1374,
+        imgHeight = 984,
         posArr = [
             0, //orange
-            80, //number 7 
-            165, //bar
-            237, //guava
-            310, //banana
-            378, //cherry
-            454, //orange
-            539, //number 7
-            624, //bar
-            696, //guava
-            769, //banana
-            837, //cherry
-            913, //orange
-            1000, //number 7
-            1085, //bar
-            1157, //guava
-            1230, //banana
-            1298 //cherry
+            144, //number 7
+            288, //bar
+            432, //guava
+            576, //banana
+            720, //cherry
+            864, //orange
         ];
     
     var win = [];
-    win[0] = win[454] = win[913] = 1;
-    win[80] = win[539] = win[1000] = 2;
-    win[165] = win[624] = win[1085] = 3;
-    win[237] = win[696] = win[1157] = 4;
-    win[310] = win[769] = win[1230] = 5;
-    win[378] = win[837] = win[1298] = 6;
+    win[0] = 1;
+    win[144] = 2;
+    win[288] = 3;
+    win[432] = 4;
+    win[576] = 5;
+    win[720] = 6;
 
     /**
     * @class Slot
