@@ -13,24 +13,23 @@ $(document).ready(function() {
     * Global variables
     */
     var completed = 0,
-        imgHeight = 984,
+        imgHeight = 842,
         posArr = [
             0, //orange
-            144, //number 7
+            148, //number 7
             288, //bar
-            432, //guava
-            576, //banana
-            720, //cherry
-            864, //orange
+            426, //guava
+            570, //banana
+            705, //cherry
         ];
     
     var win = [];
     win[0] = 1;
-    win[144] = 2;
+    win[148] = 2;
     win[288] = 3;
-    win[432] = 4;
-    win[576] = 5;
-    win[720] = 6;
+    win[426] = 4;
+    win[570] = 5;
+    win[705] = 6;
 
     /**
     * @class Slot
@@ -162,9 +161,9 @@ $(document).ready(function() {
     function printResult() {
         var res;
         if(win[a.pos] === win[b.pos] && win[a.pos] === win[c.pos]) {
-            res = "You Win!";
+            res = "就决定是你了!";
         } else {
-            res = "You Lose";
+            res = "嗯...很难抉择";
         }
         $('#result').html(res);
     }
@@ -179,11 +178,11 @@ $(document).ready(function() {
     */
     $('#control').click(function() {
         var x;
-        if(this.innerHTML == "Start") {
+        if(this.innerHTML == "开始") {
             a.start();
             b.start();
             c.start();
-            this.innerHTML = "Stop";
+            this.innerHTML = "停";
             
             disableControl(); //disable control until the slots reach max speed
             
@@ -195,11 +194,11 @@ $(document).ready(function() {
                     window.clearInterval(x);
                 }
             }, 100);
-        } else if(this.innerHTML == "Stop") {
+        } else if(this.innerHTML == "停") {
             a.stop();
             b.stop();
             c.stop();
-            this.innerHTML = "Reset";
+            this.innerHTML = "重置";
 
             disableControl(); //disable control until the slots stop
             
@@ -216,7 +215,7 @@ $(document).ready(function() {
             a.reset();
             b.reset();
             c.reset();
-            this.innerHTML = "Start";
+            this.innerHTML = "开始";
         }
     });
 });
